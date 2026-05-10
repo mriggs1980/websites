@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSW Painting & Remodeling | Columbia, Clarksville & Baltimore MD Painters</title>
+<meta name="description" content="JSW Painting & Remodeling — BBB A+ rated painting & remodeling contractor serving Columbia, Clarksville, Ellicott City & Baltimore MD. Free estimates. Financing available. (443) 678-9018">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #0D2137;
+    --navy-mid: #1A3A5C;
+    --gold: #C8831A;
+    --gold-light: #F0A830;
+    --cream: #FBF8F3;
+    --cream-dark: #F3EEE6;
+    --text: #1A1A1A;
+    --text-mid: #444;
+    --text-light: #777;
+    --white: #ffffff;
+    --green: #2D6A4F;
+    --border: rgba(0,0,0,0.1);
+    --radius: 10px;
+    --shadow: 0 4px 24px rgba(0,0,0,0.10);
+    --shadow-lg: 0 12px 48px rgba(0,0,0,0.14);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* ── TYPOGRAPHY ── */
+  .display { font-family: 'Playfair Display', serif; }
+  h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+  h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+  h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
+  h3 { font-size: 1.2rem; }
+  p { line-height: 1.7; }
+
+  /* ── UTILS ── */
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--gold); color: var(--white);
+    font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 15px;
+    padding: 14px 28px; border-radius: 6px; text-decoration: none;
+    border: none; cursor: pointer; transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+  }
+  .btn-primary:hover { background: #b5721a; transform: translateY(-1px); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent; color: var(--white);
+    font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 15px;
+    padding: 13px 26px; border-radius: 6px; text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.5); cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.08); }
+  .tag {
+    display: inline-block; background: var(--cream-dark);
+    color: var(--gold); font-size: 12px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 4px; margin-bottom: 12px;
+  }
+  .section-intro { max-width: 620px; }
+  .section-intro p { color: var(--text-mid); font-size: 17px; margin-top: 12px; }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    background: var(--navy);
+    padding: 8px 0;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+  }
+  .topbar .container {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;
+  }
+  .topbar a { color: rgba(255,255,255,0.85); text-decoration: none; }
+  .topbar a:hover { color: var(--gold-light); }
+  .topbar-badges { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .topbar-badge {
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 4px; padding: 3px 10px; font-size: 12px; font-weight: 500;
+    color: rgba(255,255,255,0.9);
+  }
+  .topbar-badge.gold { background: var(--gold); color: white; border-color: var(--gold); }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  }
+  .header-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 24px; max-width: 1140px; margin: 0 auto; gap: 20px;
+  }
+  .logo {
+    display: flex; flex-direction: column; text-decoration: none;
+    line-height: 1.1;
+  }
+  .logo-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 700; color: var(--navy);
+    letter-spacing: -0.01em;
+  }
+  .logo-sub { font-size: 11px; color: var(--gold); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+  nav { display: flex; align-items: center; gap: 28px; }
+  nav a {
+    font-size: 14px; font-weight: 500; color: var(--text-mid);
+    text-decoration: none; transition: color 0.2s;
+  }
+  nav a:hover { color: var(--navy); }
+  .header-cta { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+  .header-phone {
+    font-size: 17px; font-weight: 700; color: var(--navy);
+    text-decoration: none; letter-spacing: -0.01em;
+  }
+  .header-phone:hover { color: var(--gold); }
+  @media (max-width: 768px) {
+    nav { display: none; }
+    .topbar-badges { display: none; }
+    .header-phone { font-size: 15px; }
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    padding: 80px 0 70px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1' fill='rgba(200,131,26,0.15)'/%3E%3C/svg%3E");
+    opacity: 0.6;
+  }
+  .hero-inner {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    position: relative; z-index: 1;
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(200,131,26,0.2); border: 1px solid rgba(200,131,26,0.4);
+    border-radius: 4px; padding: 5px 12px; margin-bottom: 20px;
+    font-size: 12px; font-weight: 600; color: var(--gold-light);
+    text-transform: uppercase; letter-spacing: 0.07em;
+  }
+  .hero h1 { color: var(--white); margin-bottom: 20px; }
+  .hero h1 span { color: var(--gold-light); }
+  .hero-sub { color: rgba(255,255,255,0.75); font-size: 17px; margin-bottom: 32px; max-width: 500px; }
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 36px; }
+  .hero-trust { display: flex; gap: 20px; flex-wrap: wrap; }
+  .hero-trust-item {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 13px; color: rgba(255,255,255,0.65); font-weight: 500;
+  }
+  .hero-trust-item svg { flex-shrink: 0; }
+  .hero-card {
+    background: var(--white); border-radius: 16px;
+    overflow: hidden; box-shadow: var(--shadow-lg);
+  }
+  .hero-card-header {
+    background: var(--gold); padding: 18px 24px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hero-card-header h3 { color: white; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; }
+  .hero-form { padding: 24px; }
+  .form-row { margin-bottom: 14px; }
+  .form-row label { display: block; font-size: 12px; font-weight: 600; color: var(--text-mid); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .form-row input, .form-row select, .form-row textarea {
+    width: 100%; padding: 11px 14px;
+    border: 1.5px solid #e0e0e0; border-radius: 6px;
+    font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--text);
+    background: #fafafa; transition: border-color 0.2s;
+    outline: none;
+  }
+  .form-row input:focus, .form-row select:focus, .form-row textarea:focus { border-color: var(--gold); background: white; }
+  .form-row textarea { height: 70px; resize: none; }
+  .hero-form .btn-primary { width: 100%; justify-content: center; font-size: 16px; padding: 15px; }
+  .form-note { text-align: center; font-size: 12px; color: var(--text-light); margin-top: 10px; }
+  @media (max-width: 860px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-card { max-width: 480px; }
+    .hero { padding: 56px 0 52px; }
+  }
+
+  /* ── TRUST BAR ── */
+  .trust-bar { background: var(--cream-dark); padding: 20px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .trust-bar-inner {
+    display: flex; align-items: center; justify-content: center;
+    gap: 32px; flex-wrap: wrap;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 14px; font-weight: 600; color: var(--navy);
+  }
+  .trust-icon {
+    width: 32px; height: 32px; background: var(--navy);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .trust-icon svg { color: white; }
+  .trust-divider { width: 1px; height: 24px; background: rgba(0,0,0,0.12); }
+  @media (max-width: 600px) { .trust-divider { display: none; } }
+
+  /* ── SERVICES ── */
+  .services { padding: 90px 0; }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px; margin-top: 48px;
+  }
+  .service-card {
+    background: var(--cream); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 28px 24px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .service-card::before {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+    height: 3px; background: var(--gold); transform: scaleX(0);
+    transform-origin: left; transition: transform 0.25s;
+  }
+  .service-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-icon {
+    width: 48px; height: 48px; background: var(--navy);
+    border-radius: 10px; display: flex; align-items: center;
+    justify-content: center; margin-bottom: 16px;
+  }
+  .service-card h3 { color: var(--navy); margin-bottom: 8px; font-family: 'DM Sans', sans-serif; font-weight: 700; }
+  .service-card p { font-size: 14px; color: var(--text-mid); }
+
+  /* ── AREAS ── */
+  .areas { background: var(--navy); padding: 80px 0; }
+  .areas h2 { color: white; }
+  .areas .section-intro p { color: rgba(255,255,255,0.65); }
+  .areas-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px; margin-top: 48px;
+  }
+  .area-card {
+    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius); padding: 22px 20px;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .area-card:hover { background: rgba(255,255,255,0.12); border-color: var(--gold); }
+  .area-card h4 { color: white; font-family: 'DM Sans', sans-serif; font-weight: 700; margin-bottom: 4px; }
+  .area-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; }
+  .area-badge.premium { background: var(--gold); color: white; }
+  .area-badge.standard { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); }
+  .area-card p { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 8px; }
+
+  /* ── PROCESS ── */
+  .process { padding: 90px 0; background: var(--cream); }
+  .process-steps {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0; margin-top: 56px; position: relative;
+  }
+  .process-step {
+    padding: 32px 28px; position: relative; text-align: center;
+  }
+  .step-num {
+    width: 52px; height: 52px; background: var(--navy); color: white;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700;
+    margin: 0 auto 18px;
+  }
+  .process-step h3 { color: var(--navy); font-family: 'DM Sans', sans-serif; font-weight: 700; margin-bottom: 8px; }
+  .process-step p { font-size: 14px; color: var(--text-mid); }
+  .process-arrow {
+    position: absolute; right: -16px; top: 50%; transform: translateY(-50%);
+    font-size: 24px; color: var(--gold); z-index: 2; display: none;
+  }
+  @media (min-width: 768px) { .process-arrow { display: block; } }
+
+  /* ── GALLERY ── */
+  .gallery { padding: 90px 0; }
+  .gallery-filters {
+    display: flex; gap: 8px; flex-wrap: wrap; margin: 40px 0 32px;
+  }
+  .filter-btn {
+    padding: 8px 18px; border: 1.5px solid var(--border); border-radius: 100px;
+    font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500;
+    background: white; color: var(--text-mid); cursor: pointer; transition: all 0.2s;
+  }
+  .filter-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
+  .filter-btn:hover:not(.active) { border-color: var(--navy); color: var(--navy); }
+  .gallery-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .gallery-item {
+    border-radius: var(--radius); overflow: hidden;
+    box-shadow: var(--shadow); position: relative; aspect-ratio: 4/3;
+    cursor: pointer;
+  }
+  .gallery-item-inner {
+    display: grid; grid-template-columns: 1fr 1fr; height: 100%; gap: 2px; background: #222;
+  }
+  .before-label, .after-label {
+    position: absolute; z-index: 2; padding: 4px 10px;
+    font-size: 11px; font-weight: 700; border-radius: 3px; letter-spacing: 0.04em;
+  }
+  .before-label { top: 8px; left: 8px; background: rgba(0,0,0,0.6); color: white; }
+  .after-label { top: 8px; right: 8px; background: var(--gold); color: white; }
+  .gallery-bg {
+    background-size: cover; background-position: center;
+    transition: transform 0.3s; height: 100%;
+  }
+  .gallery-item:hover .gallery-bg { transform: scale(1.03); }
+  .gallery-overlay {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(10,20,40,0.85) 0%, transparent 100%);
+    padding: 20px 16px 14px;
+  }
+  .gallery-overlay h4 { color: white; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 14px; }
+  .gallery-overlay span { font-size: 12px; color: rgba(255,255,255,0.6); }
+
+  /* Gallery color swatches as stand-ins */
+  .g1-b { background-color: #c8a882; }
+  .g1-a { background-color: #e8d9c0; }
+  .g2-b { background-color: #8fa0a8; }
+  .g2-a { background-color: #dce8f0; }
+  .g3-b { background-color: #b5a090; }
+  .g3-a { background-color: #f5f0e8; }
+  .g4-b { background-color: #a8b4a0; }
+  .g4-a { background-color: #d8e8d0; }
+  .g5-b { background-color: #9090a0; }
+  .g5-a { background-color: #e0e8f8; }
+  .g6-b { background-color: #b8a090; }
+  .g6-a { background-color: #f0e8d8; }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials { background: var(--cream-dark); padding: 90px 0; }
+  .testimonials-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px; margin-top: 48px;
+  }
+  .testimonial-card {
+    background: white; border-radius: var(--radius); padding: 28px 24px;
+    box-shadow: var(--shadow); border-left: 4px solid var(--gold);
+  }
+  .stars { color: var(--gold); font-size: 18px; margin-bottom: 14px; }
+  .testimonial-card p { font-size: 15px; color: var(--text-mid); line-height: 1.65; font-style: italic; }
+  .reviewer { margin-top: 16px; display: flex; align-items: center; gap: 10px; }
+  .reviewer-avatar {
+    width: 36px; height: 36px; border-radius: 50%; background: var(--navy);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700; color: white;
+  }
+  .reviewer-name { font-size: 13px; font-weight: 700; color: var(--navy); }
+  .reviewer-location { font-size: 12px; color: var(--text-light); }
+
+  /* ── BOOK ESTIMATE ── */
+  .book-section {
+    background: var(--gold);
+    padding: 80px 0;
+  }
+  .book-inner {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+  }
+  .book-inner h2 { color: white; }
+  .book-inner p { color: rgba(255,255,255,0.85); font-size: 17px; margin-top: 12px; }
+  .book-features { margin-top: 28px; display: flex; flex-direction: column; gap: 10px; }
+  .book-feature {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 15px; color: white; font-weight: 500;
+  }
+  .book-feature svg { flex-shrink: 0; }
+  .book-form-card {
+    background: white; border-radius: 14px; padding: 32px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.15);
+  }
+  .book-form-card h3 { color: var(--navy); font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 18px; margin-bottom: 20px; }
+  .slot-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 12px 0 20px; }
+  .slot-btn {
+    padding: 9px 6px; border: 1.5px solid #e0e0e0; border-radius: 6px;
+    font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500;
+    background: white; cursor: pointer; text-align: center; transition: all 0.15s;
+  }
+  .slot-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .slot-btn.selected { background: var(--navy); color: white; border-color: var(--navy); }
+  .slot-date { display: block; font-weight: 700; font-size: 11px; color: inherit; }
+  @media (max-width: 760px) { .book-inner { grid-template-columns: 1fr; } }
+
+  /* ── FINANCING ── */
+  .financing-bar {
+    background: var(--navy); padding: 28px 0;
+    border-top: 3px solid var(--gold);
+  }
+  .financing-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 20px;
+  }
+  .financing-text { display: flex; align-items: center; gap: 16px; }
+  .financing-badge {
+    background: var(--gold); color: white; font-weight: 800;
+    font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 6px 14px; border-radius: 4px; white-space: nowrap;
+  }
+  .financing-text p { color: rgba(255,255,255,0.85); font-size: 15px; }
+  .financing-text p strong { color: white; }
+
+  /* ── FOOTER ── */
+  footer { background: #09192B; padding: 60px 0 28px; }
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px; padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand p { color: rgba(255,255,255,0.5); font-size: 14px; margin-top: 12px; max-width: 280px; line-height: 1.6; }
+  .footer-contact { margin-top: 20px; display: flex; flex-direction: column; gap: 8px; }
+  .footer-contact a { color: rgba(255,255,255,0.7); font-size: 14px; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+  .footer-contact a:hover { color: var(--gold-light); }
+  footer h4 { color: white; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 16px; }
+  footer ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  footer ul a { color: rgba(255,255,255,0.55); font-size: 14px; text-decoration: none; transition: color 0.2s; }
+  footer ul a:hover { color: rgba(255,255,255,0.9); }
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px; padding-top: 24px;
+    color: rgba(255,255,255,0.35); font-size: 12px;
+  }
+  .footer-creds { display: flex; gap: 12px; flex-wrap: wrap; }
+  .footer-cred {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px; padding: 4px 10px; font-size: 12px; color: rgba(255,255,255,0.5);
+  }
+  @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
+
+  /* ── MOBILE STICKY BAR ── */
+  .mobile-sticky {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+    background: var(--navy);
+    display: none;
+    border-top: 3px solid var(--gold);
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+  }
+  .mobile-sticky-inner {
+    display: flex; gap: 0;
+  }
+  .sticky-btn {
+    flex: 1; padding: 14px 10px;
+    font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700;
+    text-decoration: none; text-align: center;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+  }
+  .sticky-call { background: var(--gold); color: white; }
+  .sticky-book { background: var(--navy); color: white; border-left: 1px solid rgba(255,255,255,0.15); }
+  @media (max-width: 640px) { .mobile-sticky { display: flex; } body { padding-bottom: 56px; } }
+
+  /* ── SECTION SPACING ── */
+  .section-header { margin-bottom: 0; }
+  .section-header .tag { margin-bottom: 10px; }
+
+  /* ── BBB BADGE AREA ── */
+  .bbb-zone {
+    background: var(--cream); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 20px 24px;
+    display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  .bbb-text { font-size: 14px; color: var(--text-mid); }
+  .bbb-text strong { color: var(--navy); display: block; margin-bottom: 2px; }
+  .cred-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: white; border: 1px solid var(--border);
+    border-radius: 6px; padding: 8px 14px;
+    font-size: 13px; font-weight: 600; color: var(--navy);
+  }
+  .cred-pill svg { color: var(--gold); }
+
+  /* ── WHY JSW ── */
+  .why { padding: 90px 0; }
+  .why-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-top: 48px;
+  }
+  .why-points { display: flex; flex-direction: column; gap: 24px; }
+  .why-point { display: flex; gap: 16px; }
+  .why-point-icon {
+    width: 44px; height: 44px; border-radius: 10px; background: var(--cream);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .why-point h4 { font-family: 'DM Sans', sans-serif; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .why-point p { font-size: 14px; color: var(--text-mid); }
+  .why-owner-card {
+    background: var(--navy); border-radius: 16px; padding: 36px 32px; color: white;
+  }
+  .owner-avatar {
+    width: 64px; height: 64px; background: var(--gold); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700;
+    color: white; margin-bottom: 20px;
+  }
+  .why-owner-card h3 { color: white; font-family: 'DM Sans', sans-serif; font-weight: 700; margin-bottom: 4px; }
+  .why-owner-card .owner-title { color: var(--gold-light); font-size: 14px; margin-bottom: 16px; }
+  .why-owner-card p { color: rgba(255,255,255,0.7); font-size: 15px; line-height: 1.7; }
+  @media (max-width: 768px) { .why-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div>Serving Columbia, Clarksville, Ellicott City & Baltimore, MD</div>
+    <div class="topbar-badges">
+      <span class="topbar-badge gold">Financing Available</span>
+      <span class="topbar-badge">BBB A+ Rated</span>
+      <span class="topbar-badge">MHIC Licensed #118087</span>
+      <a href="tel:4436789018">(443) 678-9018</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <span class="logo-main">JSW Painting & Remodeling</span>
+      <span class="logo-sub">Parkville, MD · Est. 2018</span>
+    </a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#areas">Service Areas</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:4436789018" class="header-phone">(443) 678-9018</a>
+      <a href="#estimate" class="btn-primary">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Free Estimate
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Columbia & Clarksville MD's Trusted Choice
+        </div>
+        <h1>Transform Your Home with Maryland's<br><span>Premier Painters</span></h1>
+        <p class="hero-sub">Interior & exterior painting, kitchen & bath remodeling, cabinet refinishing, flooring & more. Owner-operated. BBB A+ rated. Financing available.</p>
+        <div class="hero-ctas">
+          <a href="#estimate" class="btn-primary">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            Book Free Estimate
+          </a>
+          <a href="#gallery" class="btn-outline">View Our Work</a>
+        </div>
+        <div class="hero-trust">
+          <div class="hero-trust-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            BBB A+ Accredited
+          </div>
+          <div class="hero-trust-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            Licensed & Insured
+          </div>
+          <div class="hero-trust-item">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            5-Star Rated
+          </div>
+          <div class="hero-trust-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            7+ Years in Business
+          </div>
+        </div>
+      </div>
+
+      <!-- QUICK ESTIMATE CARD -->
+      <div>
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            <h3>Request Your Free Estimate</h3>
+          </div>
+          <div class="hero-form">
+            <div class="form-row">
+              <label>Your Name</label>
+              <input type="text" placeholder="Jennifer Smith">
+            </div>
+            <div class="form-row">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="(443) 555-0000">
+            </div>
+            <div class="form-row">
+              <label>City / ZIP Code</label>
+              <select>
+                <option value="">Select your area...</option>
+                <option>Columbia, MD</option>
+                <option>Clarksville, MD (21029)</option>
+                <option>Ellicott City, MD</option>
+                <option>Fulton, MD</option>
+                <option>Baltimore / Parkville, MD</option>
+                <option>Other Maryland area</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label>Service Needed</label>
+              <select>
+                <option value="">What can we help with?</option>
+                <option>Interior Painting</option>
+                <option>Exterior Painting</option>
+                <option>Cabinet Painting / Refinishing</option>
+                <option>Kitchen Remodel</option>
+                <option>Bathroom Remodel</option>
+                <option>Deck Staining</option>
+                <option>Drywall Repair</option>
+                <option>Multiple Services</option>
+              </select>
+            </div>
+            <button class="btn-primary" onclick="submitForm()">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              Get My Free Estimate
+            </button>
+            <p class="form-note">✓ Free consultation &nbsp;·&nbsp; ✓ No obligation &nbsp;·&nbsp; ✓ Same-week response</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="16" height="16" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        BBB A+ Accredited
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="16" height="16" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+        </div>
+        MHIC Licensed &amp; Insured
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="16" height="16" fill="white" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        100% 5-Star Reviews
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="16" height="16" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        7+ Years Serving MD
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="16" height="16" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/></svg>
+        </div>
+        Financing Available
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">What We Do</span>
+      <h2>Full-Service Painting &amp; Remodeling</h2>
+      <div class="section-intro">
+        <p>From fresh paint to full kitchen renovations — JSW handles it all with the same crew, the same quality, and Jen's personal oversight on every project.</p>
+      </div>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="white" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        </div>
+        <h3>Interior Painting</h3>
+        <p>Custom color consultations, smooth wall prep, and flawless application. Every room, every surface.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="white" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 14l4-4 4 4 4-4 4 4"/><path d="M2 18h20M2 6h20"/></svg>
+        </div>
+        <h3>Exterior Painting</h3>
+        <p>Wood, siding, stucco, trim, doors, and more. Pressure washing, full prep, and premium coatings.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="white" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+        </div>
+        <h3>Cabinet Painting</h3>
+        <p>Transform your kitchen without replacing a cabinet. Factory-quality finishes at a fraction of replacement cost.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="white" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 9.5L12 4l9 5.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M8 21V12h8v9"/></svg>
+        </div>
+        <h3>Kitchen Remodeling</h3>
+        <p>Custom cabinetry, countertops, backsplash, lighting, and full renovation managed start to finish.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="white" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+        </div>
+        <h3>Bathroom Remodeling</h3>
+        <p>Full bath renovations including tile, fixtures, vanities, flooring, and custom showers. Before photos to breathtaking after.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="white" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 17l4-4 4 4 4-4 4 4M3 7h18"/></svg>
+        </div>
+        <h3>Deck Staining &amp; Carpentry</h3>
+        <p>Deck and porch staining, trim carpentry, drywall repair, flooring, and tile installation.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY JSW -->
+<section class="why" id="about">
+  <div class="container">
+    <div class="why-grid">
+      <div>
+        <span class="tag">Why Choose JSW</span>
+        <h2>Owner-Operated. Detail-Obsessed.</h2>
+        <div class="why-points">
+          <div class="why-point">
+            <div class="why-point-icon">
+              <svg width="22" height="22" fill="none" stroke="#C8831A" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div>
+              <h4>Verified Credentials</h4>
+              <p>BBB A+ accredited since 2019. MHIC licensed (#118087) and fully insured. Your investment is protected.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon">
+              <svg width="22" height="22" fill="none" stroke="#C8831A" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div>
+              <h4>Your Own Trained Team</h4>
+              <p>No subcontractors. JSW's own employees complete every job — the same crew you meet at the estimate.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon">
+              <svg width="22" height="22" fill="none" stroke="#C8831A" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/></svg>
+            </div>
+            <div>
+              <h4>Flexible Financing</h4>
+              <p>Don't let budget hold you back from your dream kitchen or fresh exterior. Affordable financing options available.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-point-icon">
+              <svg width="22" height="22" fill="none" stroke="#C8831A" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div>
+              <h4>Satisfaction Guaranteed</h4>
+              <p>Every project ends with a final walkthrough. We don't consider a job done until you're 100% happy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="why-owner-card">
+          <div class="owner-avatar">JW</div>
+          <h3>Jennifer Serra Weller</h3>
+          <p class="owner-title">Owner & Founder, JSW Painting & Remodeling</p>
+          <p>"I started painting more than 20 years ago as a helper and fell in love with the craft. I went on to paint schools across Baltimore County, studied business, and one day decided to build something of my own. Every project JSW completes is a reflection of my name and my commitment to quality. That's not something a franchise can offer you."</p>
+          <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+            <div style="background: rgba(255,255,255,0.08); border-radius: 6px; padding: 10px 14px; text-align: center;">
+              <div style="font-size: 22px; font-weight: 700; color: #F0A830; font-family: 'Playfair Display', serif;">20+</div>
+              <div style="font-size: 12px; color: rgba(255,255,255,0.55);">Years experience</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.08); border-radius: 6px; padding: 10px 14px; text-align: center;">
+              <div style="font-size: 22px; font-weight: 700; color: #F0A830; font-family: 'Playfair Display', serif;">500+</div>
+              <div style="font-size: 12px; color: rgba(255,255,255,0.55);">Projects completed</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.08); border-radius: 6px; padding: 10px 14px; text-align: center;">
+              <div style="font-size: 22px; font-weight: 700; color: #F0A830; font-family: 'Playfair Display', serif;">A+</div>
+              <div style="font-size: 12px; color: rgba(255,255,255,0.55);">BBB Rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas" id="areas">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag" style="background: rgba(255,255,255,0.1); color: var(--gold-light);">Service Areas</span>
+      <h2>Now Serving Columbia, Clarksville &amp; All of Central Maryland</h2>
+      <div class="section-intro">
+        <p>Based in Parkville, JSW proudly serves homeowners across Baltimore and Howard County, including Maryland's most sought-after neighborhoods.</p>
+      </div>
+    </div>
+    <div class="areas-grid">
+      <div class="area-card">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+          <h4>Clarksville, MD</h4>
+          <span class="area-badge premium">Premium Market</span>
+        </div>
+        <p>ZIP 21029 — River Hill, Burleigh Manor &amp; Clarksville estates. Howard County's highest-income neighborhoods.</p>
+      </div>
+      <div class="area-card">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+          <h4>Columbia, MD</h4>
+          <span class="area-badge premium">Premium Market</span>
+        </div>
+        <p>Wilde Lake, Hickory Ridge, Owen Brown, River Hill — full remodeling &amp; painting for Columbia homeowners.</p>
+      </div>
+      <div class="area-card">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+          <h4>Ellicott City, MD</h4>
+          <span class="area-badge premium">Premium Market</span>
+        </div>
+        <p>Historic homes to modern colonials. Interior &amp; exterior painting specialists in Ellicott City.</p>
+      </div>
+      <div class="area-card">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+          <h4>Fulton &amp; Highland, MD</h4>
+          <span class="area-badge premium">Premium Market</span>
+        </div>
+        <p>20777 &amp; 21047 — among Maryland's top ZIP codes. Luxury home projects welcome.</p>
+      </div>
+      <div class="area-card">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+          <h4>Parkville &amp; Towson</h4>
+          <span class="area-badge standard">Home Base</span>
+        </div>
+        <p>Our home territory. Serving Parkville, Towson, Perry Hall, Timonium, and all of Baltimore County.</p>
+      </div>
+      <div class="area-card">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+          <h4>All of Baltimore Metro</h4>
+          <span class="area-badge standard">Serving MD</span>
+        </div>
+        <p>White Marsh, Dundalk, Essex, Catonsville, Hunt Valley, Lutherville-Timonium, and surrounding areas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="container">
+    <div class="section-header" style="text-align: center;">
+      <span class="tag">How It Works</span>
+      <h2>Your Project in 4 Simple Steps</h2>
+      <div class="section-intro" style="margin: 0 auto;">
+        <p>We've refined our process over 7 years and hundreds of projects to make it as smooth and stress-free as possible for you.</p>
+      </div>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <h3>Free Estimate</h3>
+        <p>Jen or a senior estimator visits your home, reviews the project, and provides a detailed written quote — no surprises later.</p>
+        <div class="process-arrow">→</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <h3>Review &amp; Schedule</h3>
+        <p>You review the contract at your own pace. Once you're ready, we lock in your start date and confirm all materials and colors.</p>
+        <div class="process-arrow">→</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <h3>Work Begins</h3>
+        <p>Our own trained team shows up on time, protects your home throughout the project, and keeps you updated every day.</p>
+        <div class="process-arrow">→</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <h3>Final Walkthrough</h3>
+        <p>We walk the project with you room by room. Any touch-ups are handled immediately. You sign off only when you're thrilled.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Our Work</span>
+      <h2>Recent Transformations</h2>
+      <div class="section-intro">
+        <p>Real projects from real Maryland homeowners. Every photo is an actual JSW transformation.</p>
+      </div>
+    </div>
+    <div class="gallery-filters">
+      <button class="filter-btn active" onclick="filterGallery('all', this)">All Projects</button>
+      <button class="filter-btn" onclick="filterGallery('kitchen', this)">Kitchen Remodels</button>
+      <button class="filter-btn" onclick="filterGallery('bath', this)">Bathroom Remodels</button>
+      <button class="filter-btn" onclick="filterGallery('exterior', this)">Exterior Painting</button>
+      <button class="filter-btn" onclick="filterGallery('cabinet', this)">Cabinet Painting</button>
+      <button class="filter-btn" onclick="filterGallery('interior', this)">Interior Painting</button>
+    </div>
+    <div class="gallery-grid" id="gallery-grid">
+
+      <div class="gallery-item" data-cat="kitchen">
+        <div class="gallery-item-inner">
+          <div class="gallery-bg g1-b"></div>
+          <div class="gallery-bg g1-a"></div>
+        </div>
+        <div class="before-label">Before</div>
+        <div class="after-label">After</div>
+        <div class="gallery-overlay">
+          <h4>Kitchen Transformation</h4>
+          <span>Columbia, MD · Full Remodel</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="bath">
+        <div class="gallery-item-inner">
+          <div class="gallery-bg g2-b"></div>
+          <div class="gallery-bg g2-a"></div>
+        </div>
+        <div class="before-label">Before</div>
+        <div class="after-label">After</div>
+        <div class="gallery-overlay">
+          <h4>Master Bath Renovation</h4>
+          <span>Ellicott City, MD</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="cabinet">
+        <div class="gallery-item-inner">
+          <div class="gallery-bg g3-b"></div>
+          <div class="gallery-bg g3-a"></div>
+        </div>
+        <div class="before-label">Before</div>
+        <div class="after-label">After</div>
+        <div class="gallery-overlay">
+          <h4>Cabinet Refinishing</h4>
+          <span>Parkville, MD · Golden Oak → White</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="exterior">
+        <div class="gallery-item-inner">
+          <div class="gallery-bg g4-b"></div>
+          <div class="gallery-bg g4-a"></div>
+        </div>
+        <div class="before-label">Before</div>
+        <div class="after-label">After</div>
+        <div class="gallery-overlay">
+          <h4>Exterior Repaint</h4>
+          <span>Towson, MD · Full Exterior</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="interior">
+        <div class="gallery-item-inner">
+          <div class="gallery-bg g5-b"></div>
+          <div class="gallery-bg g5-a"></div>
+        </div>
+        <div class="before-label">Before</div>
+        <div class="after-label">After</div>
+        <div class="gallery-overlay">
+          <h4>Whole-Home Interior</h4>
+          <span>Perry Hall, MD</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="bath">
+        <div class="gallery-item-inner">
+          <div class="gallery-bg g6-b"></div>
+          <div class="gallery-bg g6-a"></div>
+        </div>
+        <div class="before-label">Before</div>
+        <div class="after-label">After</div>
+        <div class="gallery-overlay">
+          <h4>Bathroom Glow-Up</h4>
+          <span>White Marsh, MD · Tub/Shower Combo</span>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align: center; margin-top: 36px;">
+      <a href="#estimate" class="btn-primary">Start Your Transformation →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="reviews">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Reviews</span>
+      <h2>What Maryland Homeowners Say</h2>
+    </div>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"JSW truly transformed my home. They painted my bathroom and replaced molding after previous wallpaper damage — a beautiful job. I was so impressed I had them back for my bedroom. If you're looking for a company that takes pride in their work, give them a call."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">SH</div>
+          <div>
+            <div class="reviewer-name">Susan H.</div>
+            <div class="reviewer-location">Parkville, MD · Google Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"JSW Painting did a great job on the exterior of my home. Jen offered the most thoughtful approach to my shed restoration — cutting out rotted siding, making structural repairs, and painting it beautifully. Her quote was more than competitive. My shed looks better than it did new."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">MK</div>
+          <div>
+            <div class="reviewer-name">Michael K.</div>
+            <div class="reviewer-location">Towson, MD · Yelp Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"We used JSW for our kitchen and dining room and it turned out amazing. Jen and her crew were on time and professional. They cleaned up after the work was done and left my home looking brand new. I felt completely comfortable leaving them in my house."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">LM</div>
+          <div>
+            <div class="reviewer-name">Laura M.</div>
+            <div class="reviewer-location">White Marsh, MD · Yelp Review</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bbb-zone">
+      <div class="cred-pill">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        BBB A+ Accredited Since 2019
+      </div>
+      <div class="cred-pill">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+        MHIC License #118087 — Verified
+      </div>
+      <div class="cred-pill">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        100% Recommended — Facebook
+      </div>
+      <div class="bbb-text">
+        <strong>Verified Credentials</strong>
+        All licenses, insurance, and accreditations are current and verifiable.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINANCING -->
+<div class="financing-bar">
+  <div class="container">
+    <div class="financing-inner">
+      <div class="financing-text">
+        <span class="financing-badge">💳 Financing Available</span>
+        <p><strong>Don't let budget hold you back.</strong> Ask about our flexible financing options — get started on your dream project today with affordable monthly payments.</p>
+      </div>
+      <a href="#estimate" class="btn-primary" style="flex-shrink: 0;">Learn About Financing →</a>
+    </div>
+  </div>
+</div>
+
+<!-- BOOK ESTIMATE -->
+<section class="book-section" id="estimate">
+  <div class="container">
+    <div class="book-inner">
+      <div>
+        <h2 style="color: white; font-size: clamp(1.8rem, 3vw, 2.8rem);">Ready for Your Free Estimate?</h2>
+        <p>Choose a time that works for you. We'll come to your home, review your project, and give you a detailed written quote — no pressure, no obligation.</p>
+        <div class="book-features">
+          <div class="book-feature">
+            <svg width="18" height="18" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+            Same-week appointments usually available
+          </div>
+          <div class="book-feature">
+            <svg width="18" height="18" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+            Detailed written quote provided
+          </div>
+          <div class="book-feature">
+            <svg width="18" height="18" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+            No high-pressure sales tactics
+          </div>
+          <div class="book-feature">
+            <svg width="18" height="18" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+            Serving Columbia, Clarksville &amp; all of Central MD
+          </div>
+        </div>
+        <div style="margin-top: 32px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+          <div style="color: rgba(255,255,255,0.85); font-size: 15px;">Or call us directly:</div>
+          <a href="tel:4436789018" style="color: white; font-size: 22px; font-weight: 800; font-family: 'Playfair Display', serif; text-decoration: none;">(443) 678-9018</a>
+        </div>
+      </div>
+
+      <div class="book-form-card">
+        <h3>Choose a Time Slot</h3>
+        <div style="font-size: 13px; color: var(--text-light); margin-bottom: 8px;">Available this week:</div>
+        <div class="slot-grid" id="slot-grid">
+          <button class="slot-btn" onclick="selectSlot(this)"><span class="slot-date">Mon 5/12</span>9:00 AM</button>
+          <button class="slot-btn" onclick="selectSlot(this)"><span class="slot-date">Mon 5/12</span>1:00 PM</button>
+          <button class="slot-btn" onclick="selectSlot(this)"><span class="slot-date">Tue 5/13</span>10:00 AM</button>
+          <button class="slot-btn" onclick="selectSlot(this)"><span class="slot-date">Tue 5/13</span>2:00 PM</button>
+          <button class="slot-btn" onclick="selectSlot(this)"><span class="slot-date">Wed 5/14</span>9:00 AM</button>
+          <button class="slot-btn" onclick="selectSlot(this)"><span class="slot-date">Thu 5/15</span>11:00 AM</button>
+        </div>
+        <div class="form-row">
+          <label>Your Name</label>
+          <input type="text" id="book-name" placeholder="Jennifer Smith">
+        </div>
+        <div class="form-row">
+          <label>Phone</label>
+          <input type="tel" id="book-phone" placeholder="(443) 555-0000">
+        </div>
+        <div class="form-row">
+          <label>Project Address / City</label>
+          <input type="text" id="book-address" placeholder="Columbia, MD or street address">
+        </div>
+        <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="submitBooking()">
+          Confirm My Estimate Appointment →
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="font-family: 'Playfair Display', serif; font-size: 20px; color: white; font-weight: 700;">JSW Painting & Remodeling</div>
+        <p>Owner-operated painting and remodeling contractor serving Baltimore and Howard County, Maryland since 2018. BBB A+ rated. MHIC Licensed. Financing available.</p>
+        <div class="footer-contact">
+          <a href="tel:4436789018">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            (443) 678-9018
+          </a>
+          <a href="mailto:jswpaintingdesign@gmail.com">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            jswpaintingdesign@gmail.com
+          </a>
+          <a href="#">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            8712 Maravoss Ln, Parkville, MD 21234
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Interior Painting</a></li>
+          <li><a href="#">Exterior Painting</a></li>
+          <li><a href="#">Cabinet Painting</a></li>
+          <li><a href="#">Kitchen Remodeling</a></li>
+          <li><a href="#">Bathroom Remodeling</a></li>
+          <li><a href="#">Deck Staining</a></li>
+          <li><a href="#">Drywall Repair</a></li>
+          <li><a href="#">Flooring &amp; Tile</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="#">Columbia, MD</a></li>
+          <li><a href="#">Clarksville, MD</a></li>
+          <li><a href="#">Ellicott City, MD</a></li>
+          <li><a href="#">Fulton, MD</a></li>
+          <li><a href="#">Parkville, MD</a></li>
+          <li><a href="#">Towson, MD</a></li>
+          <li><a href="#">Perry Hall, MD</a></li>
+          <li><a href="#">White Marsh, MD</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Jen</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Financing</a></li>
+          <li><a href="#">Free Estimate</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 JSW Painting & Remodeling LLC · All rights reserved</div>
+      <div class="footer-creds">
+        <span class="footer-cred">BBB A+ Accredited</span>
+        <span class="footer-cred">MHIC #118087</span>
+        <span class="footer-cred">Fully Insured</span>
+        <span class="footer-cred">Est. 2018</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY BAR -->
+<div class="mobile-sticky">
+  <div class="mobile-sticky-inner">
+    <a href="tel:4436789018" class="sticky-btn sticky-call">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call Now
+    </a>
+    <a href="#estimate" class="sticky-btn sticky-book">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      Book Estimate
+    </a>
+  </div>
+</div>
+
+<!-- SCHEMA MARKUP (SEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "JSW Painting & Remodeling LLC",
+  "image": "https://www.jswpainting.com/logo.png",
+  "@id": "https://www.jswpainting.com",
+  "url": "https://www.jswpainting.com",
+  "telephone": "+14436789018",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "8712 Maravoss Ln",
+    "addressLocality": "Parkville",
+    "addressRegion": "MD",
+    "postalCode": "21234",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 39.3904,
+    "longitude": -76.5411
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:30",
+      "closes": "17:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/jswpaintingllc",
+    "https://www.instagram.com/jsw_painting_llc"
+  ],
+  "areaServed": [
+    {"@type": "City", "name": "Columbia, MD"},
+    {"@type": "City", "name": "Clarksville, MD"},
+    {"@type": "City", "name": "Ellicott City, MD"},
+    {"@type": "City", "name": "Parkville, MD"},
+    {"@type": "City", "name": "Towson, MD"}
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Painting & Remodeling Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Interior Painting"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Exterior Painting"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kitchen Remodeling"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bathroom Remodeling"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cabinet Painting"}}
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "47"
+  }
+}
+</script>
+
+<script>
+function filterGallery(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    if (cat === 'all' || item.dataset.cat === cat) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
+function selectSlot(btn) {
+  document.querySelectorAll('.slot-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+
+function submitForm() {
+  alert('Thank you! We will contact you within 24 hours to confirm your free estimate. You can also call us directly at (443) 678-9018.');
+}
+
+function submitBooking() {
+  const selected = document.querySelector('.slot-btn.selected');
+  const name = document.getElementById('book-name').value;
+  if (!selected) { alert('Please select a time slot first.'); return; }
+  if (!name) { alert('Please enter your name.'); return; }
+  alert('Your estimate is confirmed! Jen or a senior estimator will see you ' + selected.textContent.replace('\n','') + '. We\'ll call to confirm 24 hours beforehand.');
+}
+</script>
+
+</body>
+</html>
